@@ -2,7 +2,7 @@
 
 Six Canadian mortgage calculators in one page (payment and debt service, down payment, rate sensitivity, renewal, rent vs buy, prepayment) with charts, share links and PDF export.
 
-Live: https://jk-cu-ms-ds.github.io/mortgage-decision-lab/
+Live: https://alenzacodes.github.io/mortgage-decision-lab/
 
 ## How to use
 
