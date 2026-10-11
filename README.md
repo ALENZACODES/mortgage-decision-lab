@@ -6,16 +6,16 @@
 
 ![Decision lab on desktop](docs/screenshot-desktop.png)
 
-The questions people actually ask before buying, answered on one page: what will the payment be, will I pass the stress test, how much down do I need, what happens if rates move, rent or buy, and what does it cost to break the mortgage. It also puts a Canadian mortgage beside a US 30-year fixed, since the two are often compared and work very differently.
+The questions people actually ask before buying, answered on one page: will I pass the stress test, what happens at renewal, rent or buy, is prepaying worth it, and what does it cost to break the mortgage. It also puts a Canadian mortgage beside a US 30-year fixed, since the two are often compared and work very differently.
 
 ## The calculators
 
-1. Payment and debt service (GDS/TDS at the qualifying rate, and the highest price that passes)
-2. Down payment minimum and insurance
-3. Rate sensitivity
-4. Renewal payment change
-5. Rent vs buy
-6. Prepayment savings and penalty (three months' interest vs. IRD)
+1. Stress test: GDS and TDS at the qualifying rate, the highest price that passes, and how TDS moves as rates change
+2. Renewal shock: the payment change at a new rate
+3. Rent vs buy: net worth from buying vs. renting and investing the difference
+4. Prepayment: regular payments vs. adding prepayments
+5. Penalty / IRD: three months' interest vs. interest rate differential, by months left in the term
+6. Canada vs US: the same loan under semi-annual Canadian compounding and a US 30-year fixed
 
 Results can be shared as a link or exported as a PDF summary.
 
