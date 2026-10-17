@@ -26,13 +26,13 @@
       Y = (v) => h - p.b - ((h - p.t - p.b) * (v - mn)) / (mx - mn);
     for (let k = 0; k <= 4; k++) {
       const v = mn + ((mx - mn) * k) / 4;
-      s.append(el("line", { x1: p.l, x2: w - p.r, y1: Y(v), y2: Y(v), stroke: "#24304f" }));
-      s.append(el("text", { x: p.l - 6, y: Y(v) + 4, "text-anchor": "end", fill: "#9aa7c2", "font-size": 11 }, fmt(v)));
+      s.append(el("line", { x1: p.l, x2: w - p.r, y1: Y(v), y2: Y(v), stroke: "#dcd6c8" }));
+      s.append(el("text", { x: p.l - 6, y: Y(v) + 4, "text-anchor": "end", fill: "#4a5570", "font-size": 11 }, fmt(v)));
     }
     const step = Math.ceil(xLabels.length / 10);
     xLabels.forEach((l, i) => {
       if (i % step === 0 || i === xLabels.length - 1)
-        s.append(el("text", { x: X(i), y: h - 10, "text-anchor": "middle", fill: "#9aa7c2", "font-size": 11 }, l));
+        s.append(el("text", { x: X(i), y: h - 10, "text-anchor": "middle", fill: "#4a5570", "font-size": 11 }, l));
     });
     series.forEach((se) => {
       const d = se.data.map((v, i) => (i ? "L" : "M") + X(i).toFixed(1) + "," + Y(v).toFixed(1)).join("");
@@ -62,8 +62,8 @@
     const bw = (w - p.l - p.r) / labels.length;
     for (let k = 0; k <= 4; k++) {
       const v = mn + ((mx - mn) * k) / 4;
-      s.append(el("line", { x1: p.l, x2: w - p.r, y1: Y(v), y2: Y(v), stroke: "#24304f" }));
-      s.append(el("text", { x: p.l - 6, y: Y(v) + 4, "text-anchor": "end", fill: "#9aa7c2", "font-size": 11 }, fmt(v)));
+      s.append(el("line", { x1: p.l, x2: w - p.r, y1: Y(v), y2: Y(v), stroke: "#dcd6c8" }));
+      s.append(el("text", { x: p.l - 6, y: Y(v) + 4, "text-anchor": "end", fill: "#4a5570", "font-size": 11 }, fmt(v)));
     }
     values.forEach((v, i) => {
       const x = p.l + i * bw + bw * 0.18,
@@ -75,16 +75,16 @@
           width: bw * 0.64,
           height: Math.abs(Y(v) - Y(0)),
           rx: 5,
-          fill: (colors && colors[i]) || "#4f8cff",
+          fill: (colors && colors[i]) || "#011f5b",
         }),
       );
       s.append(
-        el("text", { x: x + bw * 0.32, y: y - 5, "text-anchor": "middle", fill: "#e8edf7", "font-size": 11 }, fmt(v)),
+        el("text", { x: x + bw * 0.32, y: y - 5, "text-anchor": "middle", fill: "#14213d", "font-size": 11 }, fmt(v)),
       );
       s.append(
         el(
           "text",
-          { x: x + bw * 0.32, y: h - 24, "text-anchor": "middle", fill: "#9aa7c2", "font-size": 11 },
+          { x: x + bw * 0.32, y: h - 24, "text-anchor": "middle", fill: "#4a5570", "font-size": 11 },
           labels[i],
         ),
       );
@@ -96,7 +96,7 @@
           x2: w - p.r,
           y1: Y(refLine),
           y2: Y(refLine),
-          stroke: "#f5b041",
+          stroke: "#8a5a00",
           "stroke-dasharray": "5 4",
         }),
       );
@@ -113,22 +113,22 @@
     const X = (v) => p.l + ((w - p.l - p.r) * (v - mn)) / (mx - mn || 1);
     rows.forEach((r, i) => {
       const y = p.t + i * 34;
-      s.append(el("text", { x: p.l - 10, y: y + 17, "text-anchor": "end", fill: "#cfd8ee", "font-size": 12 }, r.label));
+      s.append(el("text", { x: p.l - 10, y: y + 17, "text-anchor": "end", fill: "#2b3654", "font-size": 12 }, r.label));
       const a = Math.min(r.low, base),
         b = Math.max(r.low, base);
-      s.append(el("rect", { x: X(a), y: y + 4, width: Math.max(1, X(b) - X(a)), height: 20, fill: "#ef5b6b", rx: 4 }));
+      s.append(el("rect", { x: X(a), y: y + 4, width: Math.max(1, X(b) - X(a)), height: 20, fill: "#b3261e", rx: 4 }));
       const c = Math.min(r.high, base),
         d = Math.max(r.high, base);
-      s.append(el("rect", { x: X(c), y: y + 4, width: Math.max(1, X(d) - X(c)), height: 20, fill: "#2ecc8f", rx: 4 }));
+      s.append(el("rect", { x: X(c), y: y + 4, width: Math.max(1, X(d) - X(c)), height: 20, fill: "#1b6b3a", rx: 4 }));
       s.append(
         el(
           "text",
-          { x: X(Math.max(r.low, r.high, base)) + 6, y: y + 18, fill: "#9aa7c2", "font-size": 11 },
+          { x: X(Math.max(r.low, r.high, base)) + 6, y: y + 18, fill: "#4a5570", "font-size": 11 },
           fmt(Math.min(r.low, r.high)) + " to " + fmt(Math.max(r.low, r.high)),
         ),
       );
     });
-    s.append(el("line", { x1: X(base), x2: X(base), y1: 4, y2: h - 6, stroke: "#e8edf7", "stroke-dasharray": "4 3" }));
+    s.append(el("line", { x1: X(base), x2: X(base), y1: 4, y2: h - 6, stroke: "#14213d", "stroke-dasharray": "4 3" }));
     node.append(s);
   }
   function legend(series) {

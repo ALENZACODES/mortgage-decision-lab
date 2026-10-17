@@ -1,3 +1,5 @@
+![Mortgage Decision Lab banner](docs/banner.png)
+
 # Mortgage Decision Lab
 
 [![tests](https://github.com/ALENZACODES/mortgage-decision-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/ALENZACODES/mortgage-decision-lab/actions/workflows/tests.yml)

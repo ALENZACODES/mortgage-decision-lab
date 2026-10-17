@@ -31,7 +31,7 @@
         Charts.bar($("#chart"), {
           labels: rates.map((x) => x + "%"),
           values: rates.map((x) => C.stressTest({ ...v, rate: x }).tds),
-          colors: rates.map((x) => (C.stressTest({ ...v, rate: x }).passTDS ? "#2ecc8f" : "#ef5b6b")),
+          colors: rates.map((x) => (C.stressTest({ ...v, rate: x }).passTDS ? "#1b6b3a" : "#b3261e")),
           refLine: 44,
           fmt: (x) => x.toFixed(0) + "%",
         });
@@ -67,7 +67,7 @@
         Charts.bar($("#chart"), {
           labels: rates.map((x) => x + "%"),
           values: rates.map((x) => C.renewalShock({ ...v, newRate: x }).changePct),
-          colors: rates.map((x) => (C.renewalShock({ ...v, newRate: x }).changePct > 15 ? "#ef5b6b" : "#4f8cff")),
+          colors: rates.map((x) => (C.renewalShock({ ...v, newRate: x }).changePct > 15 ? "#b3261e" : "#011f5b")),
           fmt: (x) => x.toFixed(0) + "%",
         });
         notes(
@@ -105,8 +105,8 @@
         Charts.line($("#chart"), {
           xLabels: r.map((x) => "Y" + x.y),
           series: [
-            { name: "Buy", color: "#4f8cff", data: r.map((x) => x.buyNW), fill: 1 },
-            { name: "Rent and invest", color: "#22c3a6", data: r.map((x) => x.rentNW) },
+            { name: "Buy", color: "#011f5b", data: r.map((x) => x.buyNW), fill: 1 },
+            { name: "Rent and invest", color: "#990000", data: r.map((x) => x.rentNW) },
           ],
         });
         notes(
@@ -146,8 +146,8 @@
         Charts.line($("#chart"), {
           xLabels: yr.map((x) => "Y" + x.m / 12),
           series: [
-            { name: "Regular", color: "#9aa7c2", data: yr.map((x) => x.bal) },
-            { name: "With prepayments", color: "#22c3a6", data: yr.map((x) => fast[x.m - 1]), fill: 1 },
+            { name: "Regular", color: "#4a5570", data: yr.map((x) => x.bal) },
+            { name: "With prepayments", color: "#990000", data: yr.map((x) => fast[x.m - 1]), fill: 1 },
           ],
         });
         notes(
@@ -177,7 +177,7 @@
           values: ms.map((x) => C.penalty({ ...v, monthsLeft: x }).fixed),
           colors: ms.map((x) => {
             const q = C.penalty({ ...v, monthsLeft: x });
-            return q.ird > q.threeMonths ? "#ef5b6b" : "#4f8cff";
+            return q.ird > q.threeMonths ? "#b3261e" : "#011f5b";
           }),
         });
         notes(
@@ -204,7 +204,7 @@
         Charts.bar($("#chart"), {
           labels: ["CA interest", "CA principal", "US interest", "US principal"],
           values: [r.caInt5, v.loan - r.caBal5, r.usInt5, v.loan - r.usBal5],
-          colors: ["#ef5b6b", "#2ecc8f", "#ef5b6b", "#2ecc8f"],
+          colors: ["#b3261e", "#1b6b3a", "#b3261e", "#1b6b3a"],
         });
         notes(
           "The big structural gap: most Canadian mortgages renew every few years, so the rate risk sits with the borrower. A US 30-year fixed locks the rate for the full loan and can usually be refinanced without a large penalty. Enter your own rates; the defaults are examples.",
