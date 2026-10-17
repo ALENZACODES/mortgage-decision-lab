@@ -21,7 +21,7 @@ Results can be shared as a link or exported as a PDF summary.
 
 ## Running it
 
-Open `index.html` or serve the folder with `python3 -m http.server`.
+Open `index.html` or serve the folder with `python3 -m http.server 8000` and open http://localhost:8000/.
 
 ## Tests
 
@@ -32,13 +32,19 @@ Open `index.html` or serve the folder with `python3 -m http.server`.
 ## Sources
 
 - Interest Act, semi-annual compounding: https://laws-lois.justice.gc.ca/eng/acts/i-15/page-1.html
-- OSFI minimum qualifying rate: https://www.osfi-bsif.gc.ca/en/news/osfi-announces-minimum-qualifying-rate-uninsured-mortgages-remain-unchanged
-- CMHC premiums and GDS/TDS limits: https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-mortgage-loan-insurance-cost
-- FCAC prepayment penalties: https://www.canada.ca/en/financial-consumer-agency/services/mortgages/prepayment-penalty-mortgage.html
+- OSFI minimum qualifying rate: https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages
+- CMHC premiums and GDS/TDS limits: https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/premium-information-for-homeowner-and-small-rental-loans
+- FCAC prepayment penalties: https://www.canada.ca/en/financial-consumer-agency/services/mortgages/reduce-prepayment-penalties.html
 - Bank of Canada renewal analysis: https://www.bankofcanada.ca/2025/07/staff-analytical-note-2025-21/
 
 US figures use a 30-year fixed with monthly compounding and are for comparison only.
 
----
+On a phone:
 
-Educational only, not financial advice. John Khan.
+<img src="docs/screenshot-mobile.png" alt="Mobile layout" width="300">
+
+Educational only, not financial advice.
+
+## Licence
+
+MIT. Copyright 2026 John Khan.
