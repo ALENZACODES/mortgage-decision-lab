@@ -29,6 +29,20 @@ Open `index.html` or serve the folder with `python3 -m http.server 8000` and ope
 
 22 checks, including known payments ($500,000 at 5% over 25 years in Canada is $2,908.02/month; $400,000 at 6.5% over 30 years in the US is $2,528.27), schedules that end at zero, and the max purchase landing exactly on the binding GDS or TDS limit. They run on every push.
 
+## Files
+
+    index.html, style.css   the page
+    app.js                  the six calculators and their notes
+    calc.js                 payment, schedule, ratio and penalty maths, usable in Node
+    charts.js               small SVG charts, no libraries
+    tests/test.js           unit tests
+
+## Limits
+
+- GDS and TDS limits are the CMHC limits for insured mortgages. Lenders can be stricter, and uninsured limits vary.
+- The penalty estimate uses the two common methods. Your contract decides which one your lender uses.
+- Rent vs buy depends heavily on the growth and return rates you enter.
+
 ## Sources
 
 - Interest Act, semi-annual compounding: https://laws-lois.justice.gc.ca/eng/acts/i-15/page-1.html
